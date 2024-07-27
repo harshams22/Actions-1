@@ -4,7 +4,10 @@ on: push
 jobs:
     first_job:
         runs-on: ubuntu-latest
-        steps:           
+        steps: 
+        - name: checkout Repository
+          uses: actions/checkout@v4
+
         - name: welcome message
           run: echo "this is my first job"
 
