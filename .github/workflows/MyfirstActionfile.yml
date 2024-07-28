@@ -8,11 +8,17 @@ jobs:
         - name: checkout Repository
           uses: actions/checkout@v4
 
-        - name: welcome message
-          run: echo "this is my first job"
+        - name: List and read files
+          run: |
+            echo "this is my first job"
+            ls -ltra
+            cat README.md
+        
+        - name: Generate ASCII Artwork
+          run: cowsay -f dragon "Run for cover, I am a drafon.. RAWR!!" >> dragon.txt
 
-        - name: list file
-          run: ls
+        # - name: list file
+        #   run: ls
 
-        - name: read message
-          run: cat README.md
+        # - name: read message
+        #   run: cat README.md
