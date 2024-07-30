@@ -10,11 +10,12 @@ jobs:
       uses: actions/checkout@v4
 
     - name: checkout Repo Files
-      run: ls -ltra
+      run: |
+        cd .github/workflows/
+        ls -ltra
 
     - name: Executing Shell Script
       run: |
-        cd .github/workflows/ascii.sh
         chmod +x ascii.sh
         ./ascii.sh
       
